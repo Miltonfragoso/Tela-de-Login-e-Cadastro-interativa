@@ -1,3 +1,4 @@
+/*iportando fontes do google fonte (Open Sans) */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 /*resetar css*/
@@ -22,47 +23,14 @@
 .content {
     border-radius: 15px;
     background-color: #fff;
-    width: 80%;
-    height: 50%;
+    width: 960px;
+    height: 80%;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
-.content::before {
-    content: "" ;
-    position: absolute;
-    background-color:#58af9b;
-    width: 50%;
-    height: 100%;
-}
-.titulo {
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-.titulo-bem-vindo {
-    color: #fff;
-}
-
-.titulo-second {
-    color: #58af9b;
-}
-
-.descricao {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 30px;
-}
-
-.descricao-primary{
-    color: #fff;
-}
-
-.descricao-second {
-    color: #7f8c8d;
-}
-
+/*BTN´S*/
 .btn {
     border-radius: 15px;
     text-transform: uppercase;
@@ -71,16 +39,10 @@
     padding: 10px 50px;
     cursor: pointer;
     font-weight: bold;
-}
-
-.btn-primary {
-    background-color: transparent;
-    border: 1px solid #fff;
-}
-
-.btn-primary:hover {
-    background-color: #fff;
-    color: #58af9b;
+    width: 150px;
+    align-self: center;
+    border-width: 0;
+    margin-top: 1rem;
 }
 
 .first-content {
@@ -88,30 +50,79 @@
     border-radius: 15px;
 }
 
+.first-content .second-column{
+    z-index: 12;
+}
+
 .first-column {
- text-align: center;
- flex: 1 0 auto;
- z-index: 10;
+    text-align: center;
+    width: 40%;
+    z-index: 10;
 }
-
+ 
 .second-column {
-    flex: 2 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   }
+       width: 60%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+}
 
-.second-content {
-    position:absolute;
-    display: none;
+/*parte verde da tela */
+.content::before {
+    content: "" ;
+    position: absolute;
+    background-color:#58af9b;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+    left: 0;
 }
 
 
+
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: #58af9b;
+}
+
+
+.btn-second {
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+    transition: background-color .5s;
+}
+
+.btn-second:hover {
+    background-color: #fff;
+    border: 1px solid #58af9b;
+    color:#58af9b;
+}
+
+.label-input{
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+/*redes sociais*/
 .list-social-media {
     display: flex;
     list-style-type: none;
 }
 
+.social-media{
+    margin: 1rem 0;
+}
 .item-social-midia {
     border: 1px solid #bdc3c7;
     border-radius: 50%;
@@ -119,21 +130,247 @@
     height: 35px;
     line-height: 35px;
     text-align: center;
+    color: #95a5a6;
+    
 }
 
-.item-social-midia a {
- color: #95a5a6;
+.link-soial-midia:not(:first-child) {
+    margin-left: 10px;
 }
 
-.form imput {
-    height: 45px;
-    border: none;
-    background-color: #ecf0f1;
-    margin: 8px;
+.link-soial-midia:hover .item-social-midia{
+    background-color: #58af9b;
+    color:#fff;
+    border-color: #58af9b;
+    
 }
 
+.link-soial-midia .item-social-midia{
+    transition: background-color .5s;
+}
+
+.icon-modify{
+    color: #7f8c8d;
+    padding: 0 5px;
+    
+}
+
+/*Formulario*/
 .form{
     display: flex;
     flex-direction: column;
     width: 55%;
 }
+
+.form input {
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.titulo-primary {
+    color: #fff;
+}
+
+.titulo-second {
+    color: #58af9b;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.description-primary{
+    color: #fff;
+}
+
+.description-second {
+    color: #7f8c8d;
+}
+
+.second-content {
+    position:absolute;
+    display: flex;
+}
+
+.second-content .first-column{
+    order: 2;
+    z-index: -1;
+}
+.second-content .second-column{
+    order: 1;
+    z-index: -1;
+}
+
+.password {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.password::first-letter {
+    text-transform: capitalize;
+}
+
+.entrar-js .first-content .first-column {
+    z-index: -1;
+}
+
+
+.entrar-js .second-content .second-column{
+    z-index: 11;
+}
+
+.entrar-js .second-content .first-column{
+    z-index: 13;
+}
+
+.entrar-js .content::before{
+    left: 60%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 1.3s;
+    z-index: 12;
+}
+
+
+.cadastrar-js .second-content .first-column {
+    z-index: -1;
+}
+
+
+.cadastrar-js .first-content .second-column{
+    z-index: 11;
+}
+
+.cadastrar-js .first-content .first-column{
+    z-index: 13;
+}
+.cadastrar-js .content::before {
+    animation: slideout 1.3s;
+    z-index: 12;
+}
+
+/*DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT::before*/
+.entrar-js .first-content .second-column {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1.3s;
+}
+
+/*ANIMAÇÃO CSS PARA O CONTEÚDO*/
+@keyframes deslocamentoEsq {
+    from{
+         left: 0;
+         opacity: 1;
+         z-index: 12;
+    }
+
+    25%{
+        left: -80px;
+        opacity: .5;
+    }
+
+    50%{
+        left: -100px;
+        opacity: .2;
+    }
+
+    to{
+       left: -110px;
+       opacity: 0;
+       z-index: -1;
+    }
+}
+
+.cadastrar-js .second-content .second-column{
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 1.3s;
+}
+
+@keyframes deslocamentoDir {
+    from{
+         left: 0;
+         z-index: 12;
+    }
+
+    25%{
+        left: 80px;
+    }
+
+    50%{
+        left: 100px;
+    }
+
+    to{
+       left: 110px;
+       z-index: -1;
+    }
+}
+
+@keyframes slidein {
+    from {
+          left: 0;
+          width: 40%;
+    }
+
+    25%{
+        left: 5%;
+        width: 50%;
+    }
+
+    50%{
+        left: 25%;
+        width: 60%;
+    }
+
+    75%{
+        left: 45%;
+        width: 50%;
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+  }
+
+  @keyframes slideout {
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    25%{
+        left: 45%;
+        width: 50%;
+    }
+
+    50%{
+        left: 25%;
+        width: 60%;
+    }
+
+    75%{
+        left: 5%;
+        width: 50%;
+    }
+
+    to {
+        left: 0;
+        width: 40%;
+    }
+  }
